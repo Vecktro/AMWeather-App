@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+#contenedor{
+    background-color:#C8CACC;
+}
+#header{
+    
+    height:20%;
+    align-content: center;
+    text-align: center !important;
+}
+#menu{
+    height:10%;
+    background-color:#C8CACC;
+}
+
+.both-center{
+    height:50%;
+    background-color:#FAF6F5;
+    float:unset;
+    
+    width:100%;
+}
+
+
+.label{
+    text-align: right !important;
+}
+.form-weather{
+
+    padding-left: 7% !important;
+    padding-right: 7% !important;
+    background-color: white;
+}
+.form-float-right{
+    float: right !important;
+}
+.float-r{
+    float:right !important;
+}
+.footer-color{
+    background-color: black;
+}
+.footer-logo{
+    color: cornsilk;
+    
+}
+.float-forecast-center{
+    align-content: center;
+}
+.font-forecast{
+    text-align:center !important;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     color:#4000FF;
+     font-weight: lighter;
+}
+.font-forecast-hr{
+    text-align:center !important;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     color:#0404B4;
+     font-weight: bold;
+}
+.font-header-hr{
+    text-align:center !important;
+     font-family:'Times New Roman', Times, serif;
+     color:black;
+}
+.font-forecast-pa{
+    text-align:center !important;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

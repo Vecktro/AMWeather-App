@@ -1,0 +1,90 @@
+<div class="container">
+  <div id ="header">
+    <h3 class="font-header-hr">SERVICIO DEL CLIMA</h3>
+    <hr color="#eb6864">
+  </div>
+
+<div class="row">
+  <div class="col-lg-6 form-weather">      
+          <form>
+            <h5 class= "font-forecast-hr">Selecciona la zona</h5>     
+            <div class="form-group">    
+              <label class="label">Pais</label>
+              <input class="form-control" type="text" placeholder="Selecciona un pais" #countryCode>
+            </div>   
+            <div class="form-group">    
+                  <label class="label">Selecciona una ciudad</label>     
+              <input class="form-control mt-2" type="text" placeholder="Selecciona una ciudad"#cityName>
+            </div>   
+            <div class="well" style="max-width: 420px; height: 80px; margin: 0 auto 10px;">
+              <button (click)= "submitLocation(cityName,countryCode)" type="button" class="btn btn-primary btn-lg btn-block">Buscar</button>
+              </div>
+          </form>
+  </div>
+ <div class="col-lg-6">  
+  <h5 class= "font-forecast-hr">Reporte del clima</h5>       
+      <div class="col-md-6">
+<div *ngIf ="weather">
+  <p>
+    {{this.country}}
+    <img class ="float-right" src="https://icons.getbootstrap.com/assets/icons/brightness-high.svg" height="100px" width="100px"/>
+  </p>
+  <p>
+    Ciudad de {{this.weather.name}}
+  </p>
+  <p>
+    Temperatura: {{this.weather.main.temp}}
+  </p>
+  
+  <p>
+    Humedad: {{this.weather.main.humidity}}%
+  </p>
+  <p>
+    viento: {{this.weather.wind.speed}} km/h
+  </p>
+      </div>
+    </div>
+  
+  </div>
+ <div class="container" *ngIf ="weather">
+  <div class="row float-forecast-center">
+    <div class="col-sm">
+      <h5 class="font-forecast">LUNES</h5>
+      <img class= "center" src="https://icons.getbootstrap.com/assets/icons/cloud-sun.svg" height="120px" width="120px"/>
+      <p class="font-forecast-pa">22 ° C</p><br>
+      <p class="font-forecast">71 ° 6 F</p>
+    </div>
+  
+    <div class="col-sm">
+      <h5 class="font-forecast">MARTES</h5>
+      <img class= "center" src="https://icons.getbootstrap.com/assets/icons/clouds.svg" height="120px" width="120px"/>
+      <p class="font-forecast-pa">22 ° C</p><br>
+      <p class="font-forecast">71 ° 6 F</p>
+    </div>
+  
+    <div class="col-sm">
+      <h5 class="font-forecast">MIERCOLES</h5>
+      <img class= "center" src="https://icons.getbootstrap.com/assets/icons/cloud-hail.svg" height="120px" width="120px"/>
+      <p class="font-forecast-pa">22 ° C</p><br>
+      <p class="font-forecast">71 ° 6 F</p>
+    </div>
+      
+    <div class="col-sm">
+      <h5 class="font-forecast">JUEVES</h5>
+      <img  class= "center" src="https://icons.getbootstrap.com/assets/icons/cloud-lightning-rain.svg" height="120px" width="120px"/>
+      <p class="font-forecast-pa">22 ° C</p><br>
+      <p class="font-forecast">71 ° 6 F</p>
+    </div>
+      
+    <div class="col-sm">
+      <h5 class="font-forecast">VIERNES</h5>
+      <img class= "center" src="https://icons.getbootstrap.com/assets/icons/cloud-snow.svg" height="120px" width="120px"/>
+      <p class="font-forecast-pa">22 ° C</p><br>
+      <p class="font-forecast">71 ° 6 F</p>
+    </div>
+
+ </div>
+  
+     
+  </div>
+</div>

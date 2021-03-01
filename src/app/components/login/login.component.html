@@ -1,0 +1,25 @@
+
+    <nav>
+    <ul class="navbar-nav mr-auto">
+     
+    <li class="nav-item dropdown ">
+     <!-- --> 
+      <app-auditory [AuditoryActive] = "IsAuditory"></app-auditory> 
+      <app-register [Islogued] = "Islogin"></app-register>
+        <a class="btn btn-outline-primary" data-toggle="dropdown" type="submit" href="#" aria-haspopup="true" aria-expanded="false" *ngIf ="Islogin">Iniciar Sesion</a>
+        <a  (click)="logout()" class="btn btn-outline-primary" data-toggle="dropdown" type="submit" href="#" aria-haspopup="true" aria-expanded="false" *ngIf ="!Islogin">Logout</a>
+        <div class="dropdown-menu">
+            <label>Usuario</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="m@gmail.com" aria-label="Recipient's username" aria-describedby="basic-addon2" #Email>
+              </div>
+            <label>Contraseña</label>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1" #Password>
+              </div>
+              <button type="submit" (click)="login(Email,Password)" class="btn btn-primary form-float-right" >Iniciar Sesion </button>
+          </div>           
+    </li>
+    
+  </ul>
+   
